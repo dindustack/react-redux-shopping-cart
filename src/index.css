@@ -7,22 +7,4 @@ html {
 	background: #ffffff;
 }
 
-.bg-grey {
-	background: #ff689a;
-}
 
-.btn-grey {
-	background-color: #ff689a !important;
-}
-
-.media-body {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-}
-
-.image {
-	width: 5rem;
-	height: 5rem;
-	object-fit: cover;
-}
