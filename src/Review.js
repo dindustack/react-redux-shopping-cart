@@ -32,7 +32,6 @@ const Review = () => {
       randomNumber = index + 1;
     }
     setIndex(checkNumber(randomNumber));
-    console.log(randomNumber)
   };
 
   return (
