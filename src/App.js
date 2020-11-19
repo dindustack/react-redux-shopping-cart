@@ -1,32 +1,29 @@
-import React, { useState } from 'react';
-import data from "./Data";
-import SingleQuestion from "./Question";
+import React, { useState } from "react";
+import items from "./Data";
+import Categories from "./Categories";
+import Menu from "./Menu";
+const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 const App = () => {
-  const [questions, setQuestions] = useState(data);
+  const [menuItems, setMenuItems] = useState(items);
+  const [categories, setCategories] = useState(allCategories);
+
+  const filterItems = (category) => {
+    if (category === "all") {
+      setMenuItems(items);
+      return;
+    }
+    const newItems = items.filter((item) => item.category === category);
+    setMenuItems(newItems);
+  };
+
   return (
-    <section className="min-vh-100 d-flex align-items-center pt-5 pt-md-5 bg-primary">
+    <section className="min-vh-100 d-flex align-items-center pt-5 pt-md-5">
       <div className="container">
-        <div className="row justify-content-center ">
-          <div className="col-12 col-md-10 col-lg-8 text-center">
-            <div className="card">
-
-            
-            {/* ---- Heading ---- */}
-            <h2 className="mb-5">We love customer reviews</h2>
-
-            <div>
-              {questions.map((question) => {
-                return (
-                  <SingleQuestion key={question.id} {...question}></SingleQuestion>
-                )
-              })}
-            </div>
-            </div>
-          </div>
-        </div>
+        <Categories categories={categories} filterItems={filterItems} />
+        <Menu items={menuItems} />
       </div>
     </section>
   );
 };
 
-export default App
+export default App;
