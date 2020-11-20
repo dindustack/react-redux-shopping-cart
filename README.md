@@ -1,1 +1,1 @@
-This project is part of 15 react projects inspired by  John Smilga
+E-commerce site inspired by Coding with Basir using React-Redux.
