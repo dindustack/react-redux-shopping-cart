@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "_id": "dress1",
+      "image": "https://images.pexels.com/photos/1666073/pexels-photo-1666073.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "title": "Yellow-shade",
+      "description": "Exclusive fashion item",
+      "availableSizes": ["x", "L", "XL", "XXL"],
+      "price": "29.9"
+    },
+    {
+      "_id": "dress2",
+      "image": "https://images.pexels.com/photos/1897590/pexels-photo-1897590.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "title": "Denim Lover",
+      "description": "Exclusive fashion item",
+      "availableSizes": ["x", "M", "L"],
+      "price": "18.9"
+    },
+    {
+      "_id": "dress3",
+      "image": "https://images.pexels.com/photos/952214/pexels-photo-952214.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "title": "Corporate swag",
+      "description": "Exclusive fashion item",
+      "availableSizes": ["x", "M", "L"],
+      "price": "14.9"
+    },
+    {
+      "_id": "dress4",
+      "image": "https://images.pexels.com/photos/2005355/pexels-photo-2005355.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "title": "Yellow shade",
+      "description": "Exclusive fashion item",
+      "availableSizes": ["XL"],
+      "price": "25.9"
+    },
+    {
+      "_id": "dress5",
+      "image": "https://images.pexels.com/photos/965324/pexels-photo-965324.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "title": "Black Panther",
+      "description": "Exclusive fashion item",
+      "availableSizes": ["X", "L", "XL"],
+      "price": "10.9"
+    },
+    {
+      "_id": "dress6",
+      "image": "https://images.pexels.com/photos/794063/pexels-photo-794063.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "title": "Yellow Octavia",
+      "description": "Exclusive fashion item",
+      "availableSizes": ["XL", "XXL"],
+      "price": "49.9"
+    }
+  ]
+}
