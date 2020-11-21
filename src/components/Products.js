@@ -4,24 +4,24 @@ import React, { Component } from "react";
 class Products extends Component {
   render() {
     return (
-      <div>
-        <ul className="products">
-          {this.props.products.map((product) => (
-            <li key={product._id}>
-              <div className="product">
-                <a href={"#" + product._id}>
-                  <img src={product.image} alt={product.title} />
-                  <p>{product.title}</p>
-                </a>
-                <div className="product-price">
-                  <div>{product.price}</div>
-                  <button className="button primary">Add to Cart</button>
+      <>
+        {this.props.products.map((product) => (
+          <div className="col-md-4 col-sm-6 mb-4" key={product._id}>
+            <div className="card product-card">
+              <a href={"#" + product._id} className="card-img-top d-block overflow-hidden">
+                <img src={product.image} alt={product.title} className="img-fluid" />
+              </a>
+              <div className="card-body py-2">
+                <h3 className="card-title d-block fs-3">{product.title}</h3>
+                <div className="d-flex justify-content-between">
+                  <div className="text-primary h3">${product.price}</div>
+                  <button className="btn btn-outline-primary">Add to Cart</button>
                 </div>
               </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+            </div>
+          </div>
+        ))}
+      </>
     );
   }
 }

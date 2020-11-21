@@ -1,62 +1,36 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { filterProducts, sortProducts } from "../actions/productActions";
 
 class Filter extends Component {
   render() {
-    return !this.props.filteredProducts ? (
-      <div>Loading...</div>
-    ) : (
-      <div className="filter">
-        <div className="filter-result">
-          {this.props.filteredProducts.length} Products
+    return (
+      <>
+        <div className="d-flex justify-content-between">
+    <div className="h3 mb-3 mr-5">{this.props.count} products{" "}</div>
+
+          <div className="input-group mb-3">
+            <label className="input-group-text">Order</label>
+            <select className="btn btn-outline-primary" value={this.props.sort} onChange={this.props.sortProducts}>
+              <option>Latest</option>
+              <option>Lowest</option>
+              <option>Highest</option>
+            </select>
+          </div>
+
+          <div className="input-group mb-3">
+            <label className="input-group-text">Filter</label>
+            <select className="btn btn-outline-primary" value={this.props.size} onChange={this.props.filterProducts}>
+              <option value="">ALL</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+          </div>
         </div>
-        <div className="filter-sort">
-          Order{" "}
-          <select
-            value={this.props.sort}
-            onChange={(e) =>
-              this.props.sortProducts(
-                this.props.filteredProducts,
-                e.target.value
-              )
-            }
-          >
-            <option value="latest">Latest</option>
-            <option value="lowest">Lowest</option>
-            <option value="highest">Highest</option>
-          </select>
-        </div>
-        <div className="filter-size">
-          Filter{" "}
-          <select
-            value={this.props.size}
-            onChange={(e) =>
-              this.props.filterProducts(this.props.products, e.target.value)
-            }
-          >
-            <option value="">ALL</option>
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-            <option value="XXL">XXL</option>
-          </select>
-        </div>
-      </div>
+      </>
     );
   }
 }
-export default connect(
-  (state) => ({
-    size: state.products.size,
-    sort: state.products.sort,
-    products: state.products.items,
-    filteredProducts: state.products.filteredItems,
-  }),
-  {
-    filterProducts,
-    sortProducts,
-  }
-)(Filter);
+export default Filter;
